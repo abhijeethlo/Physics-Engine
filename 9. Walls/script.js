@@ -74,7 +74,7 @@ class Ball{
         this.elasticity = 1;
         this.vel = new Vector(0,0);
         this.acc = new Vector(0,0);
-        this.acceleration = 0.5;
+        this.acceleration = 1;
         this.player = false;
         BALLZ.push(this);
     }
@@ -321,8 +321,8 @@ function mainLoop(timestamp) {
 }
 
 for (let i = 0; i < 10; i++){
-    let newBall = new Ball(randInt(100,500), randInt(50,400), randInt(20,50), randInt(0,10));
-    newBall.elasticity = randInt(0,10) / 10;
+    let newBall = new Ball(randInt(100,500), randInt(50,400), randInt(20,50), randInt(2,10));
+    newBall.elasticity = randInt(0,10) / 8;
 }
 
 let Wall2 = new Wall(300, 400, 550, 200);
